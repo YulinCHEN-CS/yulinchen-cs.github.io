@@ -12,11 +12,11 @@ redirect_from:
 
 Proficient Programming Languages
 ======
-![java-icon](../images/java-icon.png)
-![c-icon](../images/c-icon.png)
-![python-icon](../images/python-icon.png)
-![haskell-icon](../images/haskell-icon.png)
-![shell-icon](../images/shell-icon.png)
+<img src="../images/java-icon.png" alt="java-icon" style="zoom:30%;" />
+<img src="../images/c-icon.png" alt="c-icon" style="zoom:30%;" />
+<img src="../images/python-icon.png" alt="python-icon" style="zoom:30%;" />
+<img src="../images/haskell-icon.png" alt="haskell-icon" style="zoom:30%;" />
+<img src="../images/shell-icon.png" alt="shell-icon" style="zoom:30%;" />
 
 
 My skills
