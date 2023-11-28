@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Stephen Y.Chen" # "Your Sidebar Name"
-  avatar           : "images/photo.png" # "Your avatar image"
+  avatar           : "images/photo_720*720.png" # "Your avatar image"
   bio              : "Computer science student @ UCL" # "Your biography for the left-hand sidebar"
   location         : "London, UK" # "Your location"
   employer         :
