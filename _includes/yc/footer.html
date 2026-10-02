@@ -1,0 +1,15 @@
+{%- assign a = site.author -%}
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p class="site-footer__name">{{ a.full_name }}</p>
+    <ul class="links">
+      <li><a href="mailto:{{ a.email }}">{% include yc/icon.html name="mail" %}<span>Email</span></a></li>
+      <li><a href="https://github.com/{{ a.github }}" rel="me">{% include yc/icon.html name="github" %}<span>GitHub</span></a></li>
+      <li><a href="https://www.linkedin.com/in/{{ a.linkedin }}" rel="me">{% include yc/icon.html name="linkedin" %}<span>LinkedIn</span></a></li>
+      {%- if a.scholar and a.scholar != "" %}
+      <li><a href="{{ a.scholar }}" rel="me">{% include yc/icon.html name="scholar" %}<span>Scholar</span></a></li>
+      {%- endif %}
+    </ul>
+    <p class="site-footer__meta">{{ a.location }} · © {{ site.time | date: "%Y" }}</p>
+  </div>
+</footer>

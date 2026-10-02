@@ -1,0 +1,59 @@
+# CV content. Each entry renders as one row: dates/location on the left,
+# organisation, role and bullet points on the right.
+
+education:
+  - org: "University College London (UCL)"
+    role: "MEng Computer Science — Integrated BSc + MSc"
+    dates: "2022 — 2026"
+    location: "London, UK"
+    note: "First Class Honours"
+    points:
+      - "Selected quantitative modules: Discrete Mathematics (99.1%), Mathematics & Statistics (93.0%), Intermediate Mathematics (93.0%)."
+      - "MEng thesis on structural inductive biases and graph-structured attention, supervised by Prof. Tomaso Aste."
+
+research:
+  - org: "Financial Computing & Analytics Group, UCL"
+    role: "Machine Learning Researcher"
+    context: "Energy-futures market microstructure, with Centiva Capital and A2A S.p.A."
+    dates: "Jun 2025 — Present"
+    location: "London, UK"
+    points:
+      - "Investigated minute-horizon predictability in TTF natural-gas futures from second-level limit-order-book data and raw trade ticks, and tested how mid-price forecasts translate into executable trading strategies."
+      - "Identified a persistent out-of-sample short-horizon signal from multi-level order-book imbalance, liquidity and intra-minute price dynamics, evaluated across rolling walk-forward windows."
+      - "Found that statistically measurable predictability did not consistently survive the bid–ask spread, latency, fill assumptions and transaction costs — motivating separate modelling of alpha and execution."
+      - "Built an end-to-end Python research pipeline for high-frequency feature construction, ML/DL modelling, walk-forward validation and execution-aware backtesting."
+
+  - org: "University College London"
+    role: "MEng Thesis · supervised by Prof. Tomaso Aste"
+    context: "Structural inductive biases, high-dimensional generalisation and graph-structured attention."
+    dates: "Sep 2025 — Apr 2026"
+    location: "London, UK"
+    points:
+      - "Built a controlled experimental framework with known interaction graphs, systematically perturbing network connectivity while holding depth, parameter count and sparsity fixed."
+      - "Showed that out-of-sample R² degrades monotonically as connectivity diverges from the true compositional structure; additional capacity and ℓ1-induced sparsity did not recover the aligned model’s finite-sample advantage."
+      - "Extended the result to FT-Transformer, where graph-aligned attention consistently outperformed dense attention and sparsity-matched random masks, particularly in low- and intermediate-sample regimes."
+
+engineering:
+  - org: "Montnets Cloud Communications"
+    role: "Java Software Engineering Intern"
+    context: "Backend development for the UMS Message Portal."
+    dates: "Jun 2024 — Aug 2024"
+    location: "Guangzhou, China"
+    points:
+      - "Developed Java/Spring backend services and data APIs for enterprise messaging platforms using MySQL, Elasticsearch and Docker."
+      - "Cut a multi-table channel-search API from 2 s to 80 ms through query redesign and dynamic filtering."
+      - "Migrated reporting workflows for 30M daily call-detail records from SQL to Elasticsearch, using aggregations and scheduled updates to support large-scale analytics."
+
+honours:
+  - title: "USA Computing Olympiad — Gold Division"
+    year: "2021"
+  - title: "UKMT Senior Mathematical Challenge — Gold Certificate"
+    year: "2020"
+
+skills:
+  - label: "Quant research"
+    items: [Market microstructure, Order-book signals, Time-series forecasting, Walk-forward validation, Transaction-cost analysis, Regime analysis]
+  - label: "Machine learning"
+    items: [PyTorch, scikit-learn, Sparse & graph-structured networks, Transformers]
+  - label: "Engineering"
+    items: [Python, pandas, NumPy, Polars, SQL, Java / Spring, Linux, Docker, Elasticsearch]

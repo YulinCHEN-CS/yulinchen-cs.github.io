@@ -1,0 +1,41 @@
+# Publications, newest first. Rendered on the home page and the CV.
+#
+#   me          — your name exactly as it appears in `authors` (gets highlighted)
+#   finding     — one-line headline result, shown in monospace
+#   summary     — 1–2 sentences in your own words
+#   bibtex_key  — citation key used in the generated BibTeX
+
+- title: "Dependence-Informed Sparse Neural Architecture for Stock Return Prediction"
+  authors: [Hongyu Lin, Yulin Chen, Yuanrong Wang, Antonio Briola, Tomaso Aste]
+  me: Yulin Chen
+  venue: "ACM International Conference on AI in Finance"
+  venue_short: "ACM ICAIF 2026"
+  year: 2026
+  status: Accepted
+  area: Quant finance
+  arxiv: "2608.14323"
+  arxiv_class: "q-fin.ST"
+  bibtex_key: lin2026dependence
+  finding: "Matches a 3-layer MLP on accuracy, ranks the cross-section better, ~80× fewer parameters"
+  summary: >-
+    Estimates the dependence structure among 94 firm characteristics with a Maximally
+    Filtered Clique Forest and uses its cliques to fix the depth, widths and sparse wiring
+    of a Homological Neural Network before training — so architectural complexity has a
+    direct financial meaning. Evaluated on U.S. equities, 1987–2016.
+
+- title: "Meow-Omni 1: A Multimodal Large Language Model for Feline Ethology"
+  authors: [Jucheng Hu, Zhangquan Chen, Yulin Chen, Chengjie Hong, Liang Zhou, Tairan Wang, Sifei Li, Giulio Zhu, Feng Zhou, Yiheng Zeng, Suorong Yang, Dongzhan Zhou]
+  me: Yulin Chen
+  venue: "Conference on Neural Information Processing Systems"
+  venue_short: "NeurIPS 2026"
+  year: 2026
+  status: Accepted
+  area: Multimodal ML
+  arxiv: "2605.09152"
+  arxiv_class: "cs.CL"
+  bibtex_key: hu2026meowomni
+  finding: "71.16% intent-recognition accuracy on the new MeowBench benchmark"
+  summary: >-
+    An open-source model that fuses video, audio and physiological time series with
+    text to infer what a cat actually means — the same purr can signal very different
+    internal states. Released with weights, training code and the Meow-10K dataset.

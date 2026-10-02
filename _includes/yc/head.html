@@ -1,0 +1,57 @@
+{%- assign a = site.author -%}
+{%- if page.title -%}
+  {%- assign page_title = page.title | append: " · " | append: a.full_name -%}
+{%- else -%}
+  {%- assign page_title = a.full_name | append: " · " | append: a.role -%}
+{%- endif -%}
+{%- assign page_desc = page.description | default: site.description -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ page_desc | escape }}">
+<meta name="author" content="{{ a.full_name }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="{{ page_title | escape }}">
+<meta property="og:description" content="{{ page_desc | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ a.portrait | absolute_url }}">
+<meta name="twitter:card" content="summary">
+
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5f6f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d0f11" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="{{ '/assets/yc/favicon.svg' | relative_url }}" type="image/svg+xml">
+
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="{{ '/assets/yc/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ a.name | jsonify }},
+  "alternateName": {{ a.nickname | jsonify }},
+  "url": {{ site.url | jsonify }},
+  "image": {{ a.portrait | absolute_url | jsonify }},
+  "email": {{ a.email | prepend: "mailto:" | jsonify }},
+  "alumniOf": "University College London",
+  "knowsAbout": ["Machine learning", "Quantitative finance", "Market microstructure"],
+  "sameAs": [
+    "https://github.com/{{ a.github }}",
+    "https://www.linkedin.com/in/{{ a.linkedin }}"
+  ]
+}
+</script>

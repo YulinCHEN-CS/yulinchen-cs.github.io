@@ -1,0 +1,133 @@
+---
+layout: yc
+body_class: home
+---
+{%- assign a = site.author -%}
+{%- assign cv = site.data.cv -%}
+
+<section class="hero wrap">
+  <div class="hero__text">
+    <p class="eyebrow">Machine learning <span class="x">×</span> Quantitative finance</p>
+    <h1 class="display">{{ a.name }}</h1>
+    <p class="hero__aka">— {{ a.nickname }}, to most people.</p>
+    <p class="lede">
+      I work at the intersection of machine learning and quantitative finance:
+      building models that respect the structure of markets, then checking
+      whether their edge survives contact with execution.
+    </p>
+    <p class="hero__meta">
+      <span>ML Researcher</span>
+      <span>Financial Computing &amp; Analytics Group, UCL</span>
+      <span>{{ a.location }}</span>
+    </p>
+    <div class="actions">
+      <a class="btn btn--solid" href="{{ '/cv/' | relative_url }}">Curriculum vitae</a>
+      <a class="btn" href="#publications">Publications</a>
+      <a class="btn btn--ghost" href="mailto:{{ a.email }}">{% include yc/icon.html name="mail" %} Get in touch</a>
+    </div>
+  </div>
+  <figure class="hero__portrait">
+    <img src="{{ a.portrait | relative_url }}" width="720" height="720"
+         alt="{{ a.name }} behind a camera on a rocky shoreline">
+    <figcaption>Usually behind a lens.</figcaption>
+  </figure>
+</section>
+
+<figure class="motif wrap" aria-hidden="true" data-motif>
+  <svg viewBox="0 0 1200 200" preserveAspectRatio="none"></svg>
+  <figcaption>Fig. 0 — a price path, read as a graph of the moments that matter</figcaption>
+</figure>
+
+<section class="section wrap" id="about">
+  <h2 class="section__label"><span>01</span> About</h2>
+  <div class="section__body prose">
+    <p>
+      I’m a machine learning researcher in the
+      Financial Computing &amp; Analytics Group at UCL,
+      where I recently finished a First Class MEng in Computer Science. I’m interested in what
+      happens when the structure we already know about financial data — dependence between firm
+      characteristics, the shape of a limit order book — is built directly into a model, instead
+      of being left for it to rediscover from noisy samples.
+    </p>
+    <p>
+      That has meant dependence-informed sparse networks for cross-sectional return prediction
+      (<a href="#lin2026dependence">ACM ICAIF 2026</a>), a thesis with
+      Prof. Tomaso Aste on how graph-aligned
+      architectures and attention generalise in high dimensions, and short-horizon research on
+      European natural-gas futures with Centiva Capital and A2A — where a key finding was that
+      statistically measurable predictability doesn’t reliably survive spreads, latency and
+      transaction costs.
+    </p>
+    <p>
+      Originally from Shenzhen, now in London. Away from the screen I’m usually behind a camera,
+      or hunting for something good to eat.
+    </p>
+  </div>
+</section>
+
+<section class="section wrap" id="research">
+  <h2 class="section__label"><span>02</span> Research</h2>
+  <div class="section__body">
+    <ol class="interests">
+      <li>
+        <h3>Structure-aware learning</h3>
+        <p>Building known or estimated dependence — graphs, cliques, hierarchies — into network
+        wiring and attention, so models learn from fewer samples and stay interpretable.</p>
+      </li>
+      <li>
+        <h3>Empirical asset pricing with ML</h3>
+        <p>Cross-sectional return prediction from firm characteristics, judged by honest
+        out-of-sample ranking rather than in-sample fit.</p>
+      </li>
+      <li>
+        <h3>Market microstructure</h3>
+        <p>Short-horizon signals in limit order books, and the gap between statistical
+        predictability and executable, cost-aware profit.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section wrap" id="publications">
+  <h2 class="section__label"><span>03</span> Publications</h2>
+  <div class="section__body">
+    {%- for pub in site.data.publications %}
+      {% include yc/pub.html pub=pub %}
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section wrap" id="experience">
+  <h2 class="section__label"><span>04</span> Experience</h2>
+  <div class="section__body">
+    <ul class="timeline">
+      {%- assign roles = cv.research | concat: cv.engineering -%}
+      {%- for r in roles %}
+      <li>
+        <span class="timeline__dates">{{ r.dates }}</span>
+        <span class="timeline__role">{{ r.role }}</span>
+        <span class="timeline__org">{{ r.org }}</span>
+      </li>
+      {%- endfor %}
+      {%- for e in cv.education %}
+      <li>
+        <span class="timeline__dates">{{ e.dates }}</span>
+        <span class="timeline__role">{{ e.role }}</span>
+        <span class="timeline__org">{{ e.org }} · {{ e.note }}</span>
+      </li>
+      {%- endfor %}
+    </ul>
+    <a class="more" href="{{ '/cv/' | relative_url }}">Full CV {% include yc/icon.html name="arrow" %}</a>
+  </div>
+</section>
+
+<section class="section wrap" id="contact">
+  <h2 class="section__label"><span>05</span> Contact</h2>
+  <div class="section__body">
+    <p class="contact__lead">
+      Open to quantitative research and machine learning roles, and to relocating within the U.S.
+      The quickest way to reach me is email.
+    </p>
+    <a class="contact__email" href="mailto:{{ a.email }}">{{ a.email }}</a>
+  </div>
+</section>

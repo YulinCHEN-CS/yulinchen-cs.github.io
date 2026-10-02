@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+{% include yc/head.html %}
+</head>
+<body class="page--{{ page.body_class | default: 'default' }}">
+  <a class="skip" href="#main">Skip to content</a>
+  {% include yc/header.html %}
+  <main id="main">
+{{ content }}
+  </main>
+  {% include yc/footer.html %}
+  <script src="{{ '/assets/yc/site.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+</body>
+</html>

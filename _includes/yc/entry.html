@@ -1,0 +1,22 @@
+{%- comment -%} One CV row. Pass `item` (an entry from _data/cv.yml). {%- endcomment -%}
+{%- assign e = include.item -%}
+<article class="entry">
+  <div class="entry__rail">
+    <span>{{ e.dates }}</span>
+    {%- if e.location %}<span>{{ e.location }}</span>{% endif %}
+  </div>
+  <div class="entry__body">
+    <h3 class="entry__org">{{ e.org }}</h3>
+    <p class="entry__role">{{ e.role }}{% if e.note %} <span class="entry__note">{{ e.note }}</span>{% endif %}</p>
+    {%- if e.context %}
+    <p class="entry__context">{{ e.context }}</p>
+    {%- endif %}
+    {%- if e.points %}
+    <ul class="entry__points">
+      {%- for point in e.points %}
+      <li>{{ point }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </div>
+</article>
