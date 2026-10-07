@@ -8,20 +8,20 @@ education:
     location: "London, UK"
     note: "First Class Honours"
     points:
-      - "Selected quantitative modules: Discrete Mathematics (99.1%), Mathematics & Statistics (93.0%), Intermediate Mathematics (93.0%)."
+      - "Selected coursework: Discrete Mathematics (99%), Mathematics & Statistics (93%), Computability and Complexity Theory (84%)."
       - "MEng thesis on structural inductive biases and graph-structured attention, supervised by Prof. Tomaso Aste."
 
 research:
   - org: "Financial Computing & Analytics Group, UCL"
-    role: "Machine Learning Researcher"
+    role: "Quantitative Researcher"
     context: "Energy-futures market microstructure, with Centiva Capital and A2A S.p.A."
     dates: "Jun 2025 — Present"
     location: "London, UK"
     points:
-      - "Investigated minute-horizon predictability in TTF natural-gas futures from second-level limit-order-book data and raw trade ticks, and tested how mid-price forecasts translate into executable trading strategies."
-      - "Identified a persistent out-of-sample short-horizon signal from multi-level order-book imbalance, liquidity and intra-minute price dynamics, evaluated across rolling walk-forward windows."
-      - "Found that statistically measurable predictability did not consistently survive the bid–ask spread, latency, fill assumptions and transaction costs — motivating separate modelling of alpha and execution."
-      - "Built an end-to-end Python research pipeline for high-frequency feature construction, ML/DL modelling, walk-forward validation and execution-aware backtesting."
+      - "Investigated whether short-horizon price movements in TTF natural-gas futures are predictably related to order-book and trade dynamics, using second-level L2 depth and tick-level trades across the 2020–2026 history."
+      - "Designed rolling walk-forward experiments to test signal robustness out of sample, evaluating microstructure, liquidity, flow and price-path information across horizons and market regimes; TabPFN achieved approximately 0.10 mean daily out-of-sample Spearman IC for 60-minute mid-price forecasts."
+      - "Tested whether statistical predictability survived realistic trading constraints, decomposing forecast quality from execution effects including spread, latency, fill assumptions and transaction costs; found that measurable alpha did not consistently translate into positive executable P&L."
+      - "Built an end-to-end Python research framework for high-frequency data processing, feature construction, ML/DL benchmarking, walk-forward validation and execution-aware backtesting."
 
   - org: "University College London"
     role: "MEng Thesis · supervised by Prof. Tomaso Aste"
@@ -52,8 +52,8 @@ honours:
 
 skills:
   - label: "Quant research"
-    items: [Market microstructure, Order-book signals, Time-series forecasting, Walk-forward validation, Transaction-cost analysis, Regime analysis]
+    items: [Market microstructure, Limit-order-book modelling, Time-series forecasting, Statistical validation, Walk-forward backtesting, Transaction-cost analysis, Algorithmic trading]
   - label: "Machine learning"
-    items: [PyTorch, scikit-learn, Sparse & graph-structured networks, Transformers]
-  - label: "Engineering"
-    items: [Python, pandas, NumPy, Polars, SQL, Java / Spring, Linux, Docker, Elasticsearch]
+    items: [Tabular ML, Deep learning, Transformers, Graph neural networks, Representation learning]
+  - label: "Programming"
+    items: [Python, PyTorch, scikit-learn, pandas, NumPy, Polars, SQL, Java / Spring, Linux, Docker, Elasticsearch]

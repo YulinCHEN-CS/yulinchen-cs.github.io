@@ -7,7 +7,7 @@ en:
   name: "Yulin Chen"
   full_name: "Yulin (Stephen) Chen"
   tagline: "Machine learning × quantitative finance"
-  description: "Machine learning researcher working at the intersection of machine learning and quantitative finance."
+  description: "Quantitative researcher working at the intersection of machine learning and quantitative finance."
   location: "London, UK"
   skip: "Skip to content"
   home_label: "home"
@@ -23,7 +23,7 @@ en:
       I work at the intersection of machine learning and quantitative finance:
       building models that respect the structure of markets, then checking
       whether their edge survives contact with execution.
-    meta: ["ML Researcher", "Financial Computing &amp; Analytics Group, UCL", "London, UK"]
+    meta: ["Quantitative Researcher", "Financial Computing &amp; Analytics Group, UCL", "London, UK"]
     cta_cv: "Curriculum vitae"
     cta_pubs: "Publications"
     cta_contact: "Get in touch"
@@ -35,7 +35,7 @@ en:
 
   about:
     - >-
-      I’m a machine learning researcher in the Financial Computing &amp; Analytics Group at
+      I’m a quantitative researcher in the Financial Computing &amp; Analytics Group at
       UCL, where I recently finished a First Class MEng in Computer Science. I’m interested in
       what happens when the structure we already know about financial data — dependence
       between firm characteristics, the shape of a limit order book — is built directly into a
@@ -78,7 +78,7 @@ en:
 
   cv:
     title: "Curriculum vitae"
-    description: "CV of Yulin (Stephen) Chen — machine learning researcher at the intersection of machine learning and quantitative finance."
+    description: "CV of Yulin (Stephen) Chen — quantitative researcher at the intersection of machine learning and quantitative finance."
     eyebrow: "Curriculum vitae"
     heading: "Yulin (Stephen) Chen"
     updated: "Updated October 2026"
@@ -92,7 +92,7 @@ zh:
   name: "陈昱霖"
   full_name: "陈昱霖"
   tagline: "机器学习 × 量化金融"
-  description: "陈昱霖（Yulin Chen），机器学习研究员，研究方向为机器学习与量化金融的交叉领域。"
+  description: "陈昱霖（Yulin Chen），量化研究员，研究方向为机器学习与量化金融的交叉领域。"
   location: "英国伦敦"
   skip: "跳到正文"
   home_label: "首页"
@@ -106,7 +106,7 @@ zh:
     aka: "Yulin (Stephen) Chen"
     lede: >-
       我从事机器学习与量化金融的交叉研究：构建契合市场结构的模型，再检验它们的优势在真实交易执行中是否依然成立。
-    meta: ["机器学习研究员", "UCL 金融计算与分析组", "英国伦敦"]
+    meta: ["量化研究员", "UCL 金融计算与分析组", "英国伦敦"]
     cta_cv: "个人简历"
     cta_pubs: "论文"
     cta_contact: "联系我"
@@ -118,7 +118,7 @@ zh:
 
   about:
     - >-
-      我是伦敦大学学院（UCL）金融计算与分析组（Financial Computing &amp; Analytics Group）的机器学习研究员，刚以一等荣誉学位完成 UCL 计算机科学工程硕士（MEng）。我关心的问题是：如果把我们已经了解的金融数据结构——公司特征之间的相依关系、限价订单簿的形态——直接写进模型，而不是让模型从充满噪声的样本中重新发现，会发生什么。
+      我是伦敦大学学院（UCL）金融计算与分析组（Financial Computing &amp; Analytics Group）的量化研究员，刚以一等荣誉学位完成 UCL 计算机科学工程硕士（MEng）。我关心的问题是：如果把我们已经了解的金融数据结构——公司特征之间的相依关系、限价订单簿的形态——直接写进模型，而不是让模型从充满噪声的样本中重新发现，会发生什么。
     - >-
       围绕这个问题，我做过面向横截面收益预测的相依结构驱动稀疏网络（<a href="#lin2026dependence">ACM ICAIF 2026</a>）；在 Tomaso Aste 教授指导下完成了关于图对齐架构与注意力机制如何在高维中泛化的硕士论文；并与 Centiva Capital 和 A2A 合作研究欧洲天然气期货的短周期可预测性——其中一个关键发现是：统计上可测的可预测性，往往扛不住买卖价差、延迟和交易成本。
     - >-
@@ -146,7 +146,7 @@ zh:
 
   cv:
     title: "个人简历"
-    description: "陈昱霖（Yulin Chen）的个人简历：机器学习与量化金融交叉方向的机器学习研究员。"
+    description: "陈昱霖（Yulin Chen）的个人简历：机器学习与量化金融交叉方向的量化研究员。"
     eyebrow: "个人简历"
     heading: "陈昱霖"
     updated: "更新于 2026 年 10 月"

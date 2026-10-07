@@ -7,20 +7,20 @@ education:
     location: "英国伦敦"
     note: "一等荣誉学位"
     points:
-      - "部分数理课程成绩：离散数学 99.1%，数学与统计 93.0%，中级数学 93.0%。"
+      - "部分课程成绩：离散数学 99%，数学与统计 93%，可计算性与计算复杂性理论 84%。"
       - "硕士论文研究结构性归纳偏置与图结构注意力，导师为 Tomaso Aste 教授。"
 
 research:
   - org: "UCL 金融计算与分析组"
-    role: "机器学习研究员"
+    role: "量化研究员"
     context: "能源期货市场微观结构研究，合作方为 Centiva Capital 与 A2A S.p.A.。"
     dates: "2025.06 — 至今"
     location: "英国伦敦"
     points:
-      - "利用秒级限价订单簿数据与逐笔成交数据，研究 TTF 天然气期货在分钟级别上的可预测性，并检验中间价预测能否转化为可执行的交易策略。"
-      - "从多档订单簿不平衡、流动性与分钟内价格动态中，识别出在样本外持续存在的短周期预测信号，并通过滚动前推（walk-forward）窗口进行评估。"
-      - "发现统计上可测的可预测性在计入买卖价差、延迟、成交假设与交易成本后，并不能稳定转化为可执行的盈利，由此提出将 alpha 与执行分开建模。"
-      - "搭建端到端的 Python 研究流水线，涵盖高频特征构建、机器学习/深度学习建模、滚动前推验证与考虑执行的回测。"
+      - "研究 TTF 天然气期货的短周期价格变动是否与订单簿及成交动态存在可预测的关系，数据为 2020–2026 年全历史的秒级 L2 深度与逐笔成交。"
+      - "设计滚动前推（walk-forward）实验检验信号在样本外的稳健性，跨预测周期与市场状态评估微观结构、流动性、订单流与价格路径信息；TabPFN 在 60 分钟中间价预测上取得约 0.10 的样本外日均 Spearman IC。"
+      - "检验统计可预测性能否经受真实交易约束，将预测质量与价差、延迟、成交假设和交易成本等执行效应分离；发现可测的 alpha 并不能稳定转化为正的可执行盈亏（P&L）。"
+      - "搭建端到端的 Python 研究框架，涵盖高频数据处理、特征构建、机器学习/深度学习基准对比、滚动前推验证与考虑执行的回测。"
 
   - org: "伦敦大学学院（UCL）"
     role: "硕士论文 · 导师 Tomaso Aste 教授"
@@ -51,8 +51,8 @@ honours:
 
 skills:
   - label: "量化研究"
-    items: [市场微观结构, 订单簿信号, 时间序列预测, 滚动前推验证, 交易成本分析, 市场状态分析]
+    items: [市场微观结构, 限价订单簿建模, 时间序列预测, 统计验证, 滚动前推回测, 交易成本分析, 算法交易]
   - label: "机器学习"
-    items: [PyTorch, scikit-learn, 稀疏与图结构网络, Transformer]
-  - label: "工程"
-    items: [Python, pandas, NumPy, Polars, SQL, Java / Spring, Linux, Docker, Elasticsearch]
+    items: [表格数据机器学习, 深度学习, Transformer, 图神经网络, 表示学习]
+  - label: "编程"
+    items: [Python, PyTorch, scikit-learn, pandas, NumPy, Polars, SQL, Java / Spring, Linux, Docker, Elasticsearch]

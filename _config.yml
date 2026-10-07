@@ -2,7 +2,7 @@
 # This file is NOT reloaded by `jekyll serve` — restart the server after editing.
 
 title       : "Yulin (Stephen) Chen"
-description : "Machine learning researcher working at the intersection of machine learning and quantitative finance."
+description : "Quantitative researcher working at the intersection of machine learning and quantitative finance."
 url         : "https://yulinchen-cs.github.io"
 baseurl     : ""
 locale      : "en_GB"
