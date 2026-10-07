@@ -1,16 +1,21 @@
-{%- assign home = '/' | relative_url -%}
+{%- include yc/lang.html -%}
+{%- assign home = base | relative_url -%}
+{%- assign cv_url = base | append: "cv/" -%}
 <header class="site-header">
   <div class="wrap site-header__inner">
-    <a class="brand" href="{{ home }}" aria-label="{{ site.author.name }} — home">
+    <a class="brand" href="{{ home }}" aria-label="{{ t.name }} — {{ t.home_label }}">
       <span class="brand__mark" aria-hidden="true">yc</span>
-      <span class="brand__name">{{ site.author.name }}</span>
+      <span class="brand__name">{{ t.name }}</span>
     </a>
     <nav class="nav" aria-label="Primary">
-      <a href="{{ home }}#research">Research</a>
-      <a href="{{ home }}#publications">Publications</a>
-      <a href="{{ '/cv/' | relative_url }}"{% if page.url == '/cv/' %} aria-current="page"{% endif %}>CV</a>
-      <a href="{{ home }}#contact">Contact</a>
-      <button class="theme-toggle" type="button" aria-label="Toggle dark mode" data-theme-toggle>
+      <a href="{{ home }}#research">{{ t.nav.research }}</a>
+      <a class="nav__pubs" href="{{ home }}#publications">{{ t.nav.publications }}</a>
+      <a href="{{ cv_url | relative_url }}"{% if page.url == cv_url %} aria-current="page"{% endif %}>{{ t.nav.cv }}</a>
+      <a href="{{ home }}#contact">{{ t.nav.contact }}</a>
+      {%- unless page.lang_switch == false %}
+      <a class="lang-switch" href="{{ alt_path | relative_url }}" hreflang="{{ t.switch.hreflang }}" lang="{{ t.switch.hreflang }}" aria-label="{{ t.switch.aria }}">{{ t.switch.label }}</a>
+      {%- endunless %}
+      <button class="theme-toggle" type="button" aria-label="{{ t.theme_toggle }}" data-theme-toggle>
         <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
         <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
       </button>

@@ -1,0 +1,155 @@
+# Interface text and home-page copy, per language.
+# English pages live at /, Chinese pages at /zh/. Both share the same templates.
+
+en:
+  html_lang: en
+  og_locale: en_GB
+  name: "Yulin Chen"
+  full_name: "Yulin (Stephen) Chen"
+  tagline: "Machine learning × quantitative finance"
+  description: "Machine learning researcher working at the intersection of machine learning and quantitative finance."
+  location: "London, UK"
+  skip: "Skip to content"
+  home_label: "home"
+  theme_toggle: "Toggle dark mode"
+  switch: { label: "中文", aria: "切换到中文", hreflang: "zh-CN" }
+  nav: { research: "Research", publications: "Publications", cv: "CV", contact: "Contact" }
+
+  hero:
+    eyebrow: 'Machine learning <span class="x">×</span> Quantitative finance'
+    title: "Yulin Chen"
+    aka: "— Stephen, to most people."
+    lede: >-
+      I work at the intersection of machine learning and quantitative finance:
+      building models that respect the structure of markets, then checking
+      whether their edge survives contact with execution.
+    meta: ["ML Researcher", "Financial Computing &amp; Analytics Group, UCL", "London, UK"]
+    cta_cv: "Curriculum vitae"
+    cta_pubs: "Publications"
+    cta_contact: "Get in touch"
+    portrait_alt: "Yulin Chen behind a camera on a rocky shoreline"
+    portrait_caption: "Usually behind a lens."
+  motif_caption: "Fig. 0 — a price path, read as a graph of the moments that matter"
+
+  sections: { about: "About", research: "Research", publications: "Publications", experience: "Experience", contact: "Contact" }
+
+  about:
+    - >-
+      I’m a machine learning researcher in the Financial Computing &amp; Analytics Group at
+      UCL, where I recently finished a First Class MEng in Computer Science. I’m interested in
+      what happens when the structure we already know about financial data — dependence
+      between firm characteristics, the shape of a limit order book — is built directly into a
+      model, instead of being left for it to rediscover from noisy samples.
+    - >-
+      That has meant dependence-informed sparse networks for cross-sectional return prediction
+      (<a href="#lin2026dependence">ACM ICAIF 2026</a>), a thesis with Prof. Tomaso Aste on how
+      graph-aligned architectures and attention generalise in high dimensions, and short-horizon
+      research on European natural-gas futures with Centiva Capital and A2A — where a key
+      finding was that statistically measurable predictability doesn’t reliably survive
+      spreads, latency and transaction costs.
+    - >-
+      Originally from Hainan, now in London. Away from the screen I’m usually behind a camera,
+      or hunting for something good to eat.
+
+  interests:
+    - title: "Structure-aware learning"
+      text: >-
+        Building known or estimated dependence — graphs, cliques, hierarchies — into network
+        wiring and attention, so models learn from fewer samples and stay interpretable.
+    - title: "Empirical asset pricing with ML"
+      text: >-
+        Cross-sectional return prediction from firm characteristics, judged by honest
+        out-of-sample ranking rather than in-sample fit.
+    - title: "Market microstructure"
+      text: >-
+        Short-horizon signals in limit order books, and the gap between statistical
+        predictability and executable, cost-aware profit.
+
+  more_cv: "Full CV"
+  contact_lead: >-
+    Open to quantitative research and machine learning roles.
+    The quickest way to reach me is email.
+
+  pub:
+    copy: "Copy"
+    copied: "Copied"
+    # Translations for the `status` field in _data/publications.yml
+    status: { "Accepted": "Accepted", "Under review": "Under review", "Preprint": "Preprint" }
+
+  cv:
+    title: "Curriculum vitae"
+    description: "CV of Yulin (Stephen) Chen — machine learning researcher at the intersection of machine learning and quantitative finance."
+    eyebrow: "Curriculum vitae"
+    heading: "Yulin (Stephen) Chen"
+    updated: "Updated October 2026"
+    sections: { education: "Education", publications: "Publications", research: "Research", engineering: "Engineering", honours: "Honours", skills: "Skills" }
+
+  footer: { email: "Email" }
+
+zh:
+  html_lang: zh-CN
+  og_locale: zh_CN
+  name: "陈昱霖"
+  full_name: "陈昱霖"
+  tagline: "机器学习 × 量化金融"
+  description: "陈昱霖（Yulin Chen），机器学习研究员，研究方向为机器学习与量化金融的交叉领域。"
+  location: "英国伦敦"
+  skip: "跳到正文"
+  home_label: "首页"
+  theme_toggle: "切换深色模式"
+  switch: { label: "EN", aria: "Switch to English", hreflang: "en" }
+  nav: { research: "研究", publications: "论文", cv: "简历", contact: "联系" }
+
+  hero:
+    eyebrow: '机器学习 <span class="x">×</span> 量化金融'
+    title: "陈昱霖"
+    aka: "Yulin (Stephen) Chen"
+    lede: >-
+      我从事机器学习与量化金融的交叉研究：构建契合市场结构的模型，再检验它们的优势在真实交易执行中是否依然成立。
+    meta: ["机器学习研究员", "UCL 金融计算与分析组", "英国伦敦"]
+    cta_cv: "个人简历"
+    cta_pubs: "论文"
+    cta_contact: "联系我"
+    portrait_alt: "陈昱霖在海边礁石上举着相机"
+    portrait_caption: "多半在镜头后面。"
+  motif_caption: "图 0 — 一条价格路径，被读作由关键时刻构成的图"
+
+  sections: { about: "关于", research: "研究", publications: "论文", experience: "经历", contact: "联系" }
+
+  about:
+    - >-
+      我是伦敦大学学院（UCL）金融计算与分析组（Financial Computing &amp; Analytics Group）的机器学习研究员，刚以一等荣誉学位完成 UCL 计算机科学工程硕士（MEng）。我关心的问题是：如果把我们已经了解的金融数据结构——公司特征之间的相依关系、限价订单簿的形态——直接写进模型，而不是让模型从充满噪声的样本中重新发现，会发生什么。
+    - >-
+      围绕这个问题，我做过面向横截面收益预测的相依结构驱动稀疏网络（<a href="#lin2026dependence">ACM ICAIF 2026</a>）；在 Tomaso Aste 教授指导下完成了关于图对齐架构与注意力机制如何在高维中泛化的硕士论文；并与 Centiva Capital 和 A2A 合作研究欧洲天然气期货的短周期可预测性——其中一个关键发现是：统计上可测的可预测性，往往扛不住买卖价差、延迟和交易成本。
+    - >-
+      海南人，现居伦敦。离开屏幕的时候，我多半在镜头后面，或者在找好吃的。
+
+  interests:
+    - title: "结构感知学习"
+      text: >-
+        把已知或估计出的相依结构（图、团、层级）写进网络连接与注意力机制，让模型用更少的样本学习，同时保持可解释性。
+    - title: "机器学习与实证资产定价"
+      text: >-
+        基于公司特征的横截面收益预测，以诚实的样本外排序能力、而非样本内拟合来评判。
+    - title: "市场微观结构"
+      text: >-
+        限价订单簿中的短周期信号，以及统计可预测性与可执行、计入成本的盈利之间的差距。
+
+  more_cv: "完整简历"
+  contact_lead: >-
+    欢迎量化研究与机器学习方向的工作机会。最快的联系方式是邮件。
+
+  pub:
+    copy: "复制"
+    copied: "已复制"
+    status: { "Accepted": "已录用", "Under review": "审稿中", "Preprint": "预印本" }
+
+  cv:
+    title: "个人简历"
+    description: "陈昱霖（Yulin Chen）的个人简历：机器学习与量化金融交叉方向的机器学习研究员。"
+    eyebrow: "个人简历"
+    heading: "陈昱霖"
+    updated: "更新于 2026 年 10 月"
+    sections: { education: "教育经历", publications: "论文发表", research: "研究经历", engineering: "工程经历", honours: "荣誉奖项", skills: "技能" }
+
+  footer: { email: "邮箱" }

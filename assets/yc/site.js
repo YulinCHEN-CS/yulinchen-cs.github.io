@@ -25,8 +25,9 @@
     var pre = button.parentElement.querySelector("pre");
     if (!pre) return;
     var done = function () {
-      button.textContent = "Copied";
-      setTimeout(function () { button.textContent = "Copy"; }, 1500);
+      var labels = document.body.dataset;
+      button.textContent = labels.copiedLabel || "Copied";
+      setTimeout(function () { button.textContent = labels.copyLabel || "Copy"; }, 1500);
     };
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(pre.innerText).then(done, function () {});

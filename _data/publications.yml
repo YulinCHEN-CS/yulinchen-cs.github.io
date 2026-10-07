@@ -4,6 +4,8 @@
 #   finding     — one-line headline result, shown in monospace
 #   summary     — 1–2 sentences in your own words
 #   bibtex_key  — citation key used in the generated BibTeX
+#   finding_zh / summary_zh — Chinese versions, shown on /zh/ (title, authors
+#                 and venue stay in English)
 
 - title: "Dependence-Informed Sparse Neural Architecture for Stock Return Prediction"
   authors: [Hongyu Lin, Yulin Chen, Yuanrong Wang, Antonio Briola, Tomaso Aste]
@@ -22,6 +24,9 @@
     Filtered Clique Forest and uses its cliques to fix the depth, widths and sparse wiring
     of a Homological Neural Network before training — so architectural complexity has a
     direct financial meaning. Evaluated on U.S. equities, 1987–2016.
+  finding_zh: "预测精度与三层 MLP 相当，横截面排序更优，参数量约少 80 倍"
+  summary_zh: >-
+    用最大过滤团森林（MFCF）估计 94 个公司特征之间的相依结构，并据此在训练前确定同调神经网络（HNN）的深度、各层宽度与稀疏连接——让架构复杂度具有直接的金融含义。在 1987–2016 年美股数据上评估。
 
 - title: "Meow-Omni 1: A Multimodal Large Language Model for Feline Ethology"
   authors: [Jucheng Hu, Zhangquan Chen, Yulin Chen, Chengjie Hong, Liang Zhou, Tairan Wang, Sifei Li, Giulio Zhu, Feng Zhou, Yiheng Zeng, Suorong Yang, Dongzhan Zhou]
@@ -39,3 +44,6 @@
     An open-source model that fuses video, audio and physiological time series with
     text to infer what a cat actually means — the same purr can signal very different
     internal states. Released with weights, training code and the Meow-10K dataset.
+  finding_zh: "在新基准 MeowBench 上意图识别准确率达 71.16%"
+  summary_zh: >-
+    一个开源多模态模型，将视频、音频、生理时间序列与文本融合，推断猫真正想表达什么——同样的呼噜声，可能对应截然不同的内在状态。同时开源模型权重、训练代码与 Meow-10K 数据集。

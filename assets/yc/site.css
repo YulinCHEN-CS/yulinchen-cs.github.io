@@ -293,6 +293,22 @@ a { color: inherit; text-decoration: none; }
   transition: border-color 0.15s;
 }
 .theme-toggle:hover { border-color: var(--ink); }
+
+.nav a.lang-switch {
+  display: grid;
+  place-items: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--ink);
+  font: 500 12px/1 var(--sans);
+  letter-spacing: 0.04em;
+  text-transform: none;
+  transition: border-color 0.15s, color 0.15s;
+}
+.nav a.lang-switch:hover { border-color: var(--ink); color: var(--ink); }
 .icon--sun { display: none; }
 
 @media (prefers-color-scheme: dark) {
@@ -725,6 +741,43 @@ a { color: inherit; text-decoration: none; }
 .site-footer__name { font: 400 22px/1.2 var(--serif); color: var(--ink); }
 .site-footer__meta { font: 400 12px/1.4 var(--mono); color: var(--muted); }
 
+/* ---------- Chinese (/zh/) ---------- */
+
+html:lang(zh) {
+  --serif: "Instrument Serif", "Noto Serif SC", "Songti SC", "STSong", serif;
+  --sans: "IBM Plex Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --mono: "IBM Plex Mono", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", monospace;
+}
+html:lang(zh) body { line-height: 1.8; }
+
+/* CJK runs wider than Latin per character, so line lengths are set in em. */
+.display:lang(zh) { letter-spacing: 0.04em; font-weight: 600; }
+.lede:lang(zh) { max-width: 23em; font-weight: 400; }
+.prose p:lang(zh) { max-width: 36em; }
+.pub__summary:lang(zh) { max-width: 38em; }
+.contact__lead:lang(zh) { max-width: 30em; }
+.interests h3:lang(zh),
+.entry__org:lang(zh),
+.timeline__role:lang(zh) { font-weight: 600; letter-spacing: 0.02em; }
+
+/* Browsers fake italics for CJK; keep those upright. */
+.entry__context:lang(zh),
+.motif figcaption:lang(zh) { font-style: normal; }
+
+/* Uppercase styling would shout embedded Latin terms ("MENG", "TOMASO ASTE"). */
+.entry__role:lang(zh) { text-transform: none; letter-spacing: 0.04em; }
+
+.eyebrow:lang(zh),
+.section__label:lang(zh),
+.nav a:lang(zh) { letter-spacing: 0.08em; }
+
+.cv-head__aka {
+  margin-top: 12px;
+  font: italic 400 clamp(22px, 2.4vw, 28px)/1.2 var(--serif);
+  color: var(--muted);
+}
+.site-footer__name span { margin-left: 8px; color: var(--muted); font-size: 0.8em; }
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 900px) {
@@ -763,7 +816,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 400px) {
-  .nav a[href$="#publications"] { display: none; }
+  .nav a.nav__pubs { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

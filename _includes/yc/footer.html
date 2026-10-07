@@ -1,15 +1,16 @@
+{%- include yc/lang.html -%}
 {%- assign a = site.author -%}
 <footer class="site-footer">
   <div class="wrap site-footer__inner">
-    <p class="site-footer__name">{{ a.full_name }}</p>
+    <p class="site-footer__name">{% if lang == "en" %}{{ a.full_name }}{% else %}{{ t.name }} <span lang="en">{{ a.full_name }}</span>{% endif %}</p>
     <ul class="links">
-      <li><a href="mailto:{{ a.email }}">{% include yc/icon.html name="mail" %}<span>Email</span></a></li>
+      <li><a href="mailto:{{ a.email }}">{% include yc/icon.html name="mail" %}<span>{{ t.footer.email }}</span></a></li>
       <li><a href="https://github.com/{{ a.github }}" rel="me">{% include yc/icon.html name="github" %}<span>GitHub</span></a></li>
       <li><a href="https://www.linkedin.com/in/{{ a.linkedin }}" rel="me">{% include yc/icon.html name="linkedin" %}<span>LinkedIn</span></a></li>
       {%- if a.scholar and a.scholar != "" %}
       <li><a href="{{ a.scholar }}" rel="me">{% include yc/icon.html name="scholar" %}<span>Scholar</span></a></li>
       {%- endif %}
     </ul>
-    <p class="site-footer__meta">{{ a.location }} · © {{ site.time | date: "%Y" }}</p>
+    <p class="site-footer__meta">{{ t.location }} · © {{ site.time | date: "%Y" }}</p>
   </div>
 </footer>

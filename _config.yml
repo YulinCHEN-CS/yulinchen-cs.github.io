@@ -8,21 +8,17 @@ baseurl     : ""
 locale      : "en_GB"
 timezone    : Europe/London
 
-# Shown on the home page, CV header and footer.
+# Contact details and links. Page copy in both languages lives in _data/i18n.yml.
 author:
   name        : "Yulin Chen"
+  name_zh     : "陈昱霖"
   nickname    : "Stephen"
   full_name   : "Yulin (Stephen) Chen"
-  role        : "Machine learning × quantitative finance"
-  location    : "London, UK"
   email       : "stephen.yulin.chen@gmail.com"
   github      : "YulinChen-CS"
   linkedin    : "stephen-ychen"
-  scholar     : ""      # e.g. "https://scholar.google.com/citations?user=XXXX"
+  scholar     : "https://scholar.google.com/citations?user=_VhS_CwAAAAJ"
   portrait    : "/images/photo_720*720.png"
-
-# Shown on the CV page as "Updated <month year>". Bump when the CV changes.
-cv_updated: "October 2026"
 
 # Build
 markdown    : kramdown

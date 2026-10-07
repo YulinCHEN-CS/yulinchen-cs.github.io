@@ -1,0 +1,20 @@
+{%- comment -%}
+  Sets language variables for the current page (front matter `lang: zh`, default en):
+    lang, t (strings from _data/i18n.yml), base (home URL), sfx ("" or "_zh"),
+    cv_data, en_path / zh_path (this page in each language), alt_path (the other one).
+{%- endcomment -%}
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- if lang == "en" -%}
+  {%- assign base = "/" -%}
+  {%- assign sfx = "" -%}
+  {%- assign en_path = page.url -%}
+{%- else -%}
+  {%- assign base = "/" | append: lang | append: "/" -%}
+  {%- assign sfx = "_" | append: lang -%}
+  {%- assign en_path = page.url | remove_first: "/zh" -%}
+{%- endif -%}
+{%- assign zh_path = en_path | prepend: "/zh" -%}
+{%- if lang == "en" %}{% assign alt_path = zh_path %}{% else %}{% assign alt_path = en_path %}{% endif -%}
+{%- assign cv_key = "cv" | append: sfx -%}
+{%- assign cv_data = site.data[cv_key] -%}

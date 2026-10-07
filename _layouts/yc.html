@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+{%- include yc/lang.html -%}
+<html lang="{{ t.html_lang }}">
 <head>
 {% include yc/head.html %}
 </head>
-<body class="page--{{ page.body_class | default: 'default' }}">
-  <a class="skip" href="#main">Skip to content</a>
+<body data-copy-label="{{ t.pub.copy }}" data-copied-label="{{ t.pub.copied }}" class="page--{{ page.body_class | default: 'default' }}">
+  <a class="skip" href="#main">{{ t.skip }}</a>
   {% include yc/header.html %}
   <main id="main">
 {{ content }}

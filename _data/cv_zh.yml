@@ -1,0 +1,58 @@
+# 中文简历内容，结构与 _data/cv.yml 相同。修改英文简历时请同步更新这里。
+
+education:
+  - org: "伦敦大学学院（UCL）"
+    role: "计算机科学工程硕士（MEng，本硕连读）"
+    dates: "2022 — 2026"
+    location: "英国伦敦"
+    note: "一等荣誉学位"
+    points:
+      - "部分数理课程成绩：离散数学 99.1%，数学与统计 93.0%，中级数学 93.0%。"
+      - "硕士论文研究结构性归纳偏置与图结构注意力，导师为 Tomaso Aste 教授。"
+
+research:
+  - org: "UCL 金融计算与分析组"
+    role: "机器学习研究员"
+    context: "能源期货市场微观结构研究，合作方为 Centiva Capital 与 A2A S.p.A.。"
+    dates: "2025.06 — 至今"
+    location: "英国伦敦"
+    points:
+      - "利用秒级限价订单簿数据与逐笔成交数据，研究 TTF 天然气期货在分钟级别上的可预测性，并检验中间价预测能否转化为可执行的交易策略。"
+      - "从多档订单簿不平衡、流动性与分钟内价格动态中，识别出在样本外持续存在的短周期预测信号，并通过滚动前推（walk-forward）窗口进行评估。"
+      - "发现统计上可测的可预测性在计入买卖价差、延迟、成交假设与交易成本后，并不能稳定转化为可执行的盈利，由此提出将 alpha 与执行分开建模。"
+      - "搭建端到端的 Python 研究流水线，涵盖高频特征构建、机器学习/深度学习建模、滚动前推验证与考虑执行的回测。"
+
+  - org: "伦敦大学学院（UCL）"
+    role: "硕士论文 · 导师 Tomaso Aste 教授"
+    context: "结构性归纳偏置、高维泛化与图结构注意力。"
+    dates: "2025.09 — 2026.04"
+    location: "英国伦敦"
+    points:
+      - "构建基于已知交互图的受控实验框架，在保持深度、参数量与稀疏度不变的前提下，系统地扰动网络连接结构。"
+      - "证明样本外 R² 随网络连接偏离真实组合结构而单调下降；增加模型容量或引入 ℓ1 稀疏都无法弥补结构对齐模型在有限样本下的优势。"
+      - "将结论推广到 FT-Transformer：图对齐注意力稳定优于稠密注意力和稀疏度相同的随机掩码，在小样本与中等样本区间尤为明显。"
+
+engineering:
+  - org: "梦网科技（Montnets）"
+    role: "Java 软件工程实习生"
+    context: "UMS 消息门户后端开发。"
+    dates: "2024.06 — 2024.08"
+    location: "中国广州"
+    points:
+      - "基于 MySQL、Elasticsearch 与 Docker，为企业消息平台开发 Java/Spring 后端服务与数据接口。"
+      - "通过重新设计查询与动态过滤，将一个多表通道搜索接口的响应时间从 2 秒降至 80 毫秒。"
+      - "将每日 3000 万条通话详单的报表流程从 SQL 迁移至 Elasticsearch，利用聚合与定时更新支撑大规模分析。"
+
+honours:
+  - title: "美国计算机奥林匹克竞赛（USACO）金级"
+    year: "2021"
+  - title: "英国数学挑战赛（UKMT）高级组金奖"
+    year: "2020"
+
+skills:
+  - label: "量化研究"
+    items: [市场微观结构, 订单簿信号, 时间序列预测, 滚动前推验证, 交易成本分析, 市场状态分析]
+  - label: "机器学习"
+    items: [PyTorch, scikit-learn, 稀疏与图结构网络, Transformer]
+  - label: "工程"
+    items: [Python, pandas, NumPy, Polars, SQL, Java / Spring, Linux, Docker, Elasticsearch]
